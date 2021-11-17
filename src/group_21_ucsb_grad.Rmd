@@ -13,15 +13,22 @@ library(here)
 library(janitor)
 ```
 
+
 ```{r}
 ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ```
+
 
 ```{r}
 clean_names(ucsb_grad)
 
 ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
   geom_col(aes(fill = ethnicity), position = "fill") +
-  labs(x = "Year", y = "Proportion of domestic enrollment")
+  theme_minimal() +
+  labs(x = "Year", 
+       y = "Proportion of domestic enrollment",
+       title = "Yearly UCSB Enrollment by Ethnicity",
+       subtitle = "Data Collected Between 2008 and 2019"
+       )
 ```
 
