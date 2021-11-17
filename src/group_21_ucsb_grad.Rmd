@@ -5,8 +5,8 @@ date: "11/12/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = TRUE, warning = FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 library(tidyverse)
 library(here)
@@ -26,9 +26,9 @@ ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
   geom_col(aes(fill = ethnicity), position = "fill") +
   theme_minimal() +
   labs(x = "Year", 
-       y = "Proportion of domestic enrollment",
-       title = "Yearly UCSB Enrollment by Ethnicity",
-       subtitle = "Data Collected Between 2008 and 2019"
-       )
+       y = "Proportion of domestic graduate enrollment",
+       title = "Yearly UCSB graduate student enrollment by ethnicity",
+       subtitle = "(2008 - 2019)")
 ```
 
+**Figure 1:** UCSB graduate student enrollment by ethnicity. Color varies by ethnicity as a proportion of total enrollment (UC Information Center).
