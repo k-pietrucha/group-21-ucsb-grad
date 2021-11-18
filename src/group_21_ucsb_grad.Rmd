@@ -33,6 +33,10 @@ ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
        subtitle = "(2008 - 2019)") 
 ```
 
-**Figure 1:** UCSB graduate student enrollment by ethnicity from 2008 - 2019. Color varies by ethnicity as a proportion of total enrollment (UC Information Center, 2021).
+**Figure 1:** UCSB graduate student enrollment by ethnicity from 2008 - 2019. Color varies by ethnicity as a proportion of total enrollment (UCSB Office of Budget and Planning, 2021).
+
+## Citation
+
+Office of Budget and Planning. (n.d.) Campus Profiles. University of California, Santa Barbara. Retrieved November 12, 2021 from https://bap.ucsb.edu/institutional-research/campus-profiles.
 
 ## END TASK 3
