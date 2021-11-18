@@ -1,34 +1,38 @@
 ---
 title: "Group 21 UCSB domestic grad enrollment"
 author: "Katie Pietrucha and Danny Feinberg"
-date: "11/12/2021"
+date: "11/17/2021"
 output: html_document
 ---
+## Setup
 
 ```{r setup, include = TRUE, warning = FALSE, message = FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 library(tidyverse)
 library(here)
-library(janitor)
 ```
 
+## Read in the data
 
 ```{r}
 ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ```
 
+## Visualize graduate enrollment by ethnicity 
 
 ```{r}
-clean_names(ucsb_grad)
 
 ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
   geom_col(aes(fill = ethnicity), position = "fill") +
   theme_minimal() +
+  scale_fill_discrete(name = "Ethnicity") +
   labs(x = "Year", 
        y = "Proportion of domestic graduate enrollment",
        title = "Yearly UCSB graduate student enrollment by ethnicity",
-       subtitle = "(2008 - 2019)")
+       subtitle = "(2008 - 2019)") 
 ```
 
-**Figure 1:** UCSB graduate student enrollment by ethnicity. Color varies by ethnicity as a proportion of total enrollment (UC Information Center).
+**Figure 1:** UCSB graduate student enrollment by ethnicity from 2008 - 2019. Color varies by ethnicity as a proportion of total enrollment (UC Information Center, 2021).
+
+## END TASK 3
