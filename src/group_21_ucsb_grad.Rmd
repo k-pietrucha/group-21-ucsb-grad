@@ -30,10 +30,12 @@ ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
   labs(x = "Year", 
        y = "Proportion of domestic graduate enrollment",
        title = "Yearly UCSB graduate student enrollment by ethnicity",
-       subtitle = "(2008 - 2019)") 
+       subtitle = "(2008 - 2019)",
+       caption = "Figure 1: UCSB graduate student enrollment by ethnicity from 2008 - 2019. Color varies by 
+ethnicity as a proportion of total enrollment (UCSB Office of Budget and Planning, 2021).") +
+      theme(plot.caption.position = "plot",
+      plot.caption = element_text(hjust = 0))
 ```
-
-**Figure 1:** UCSB graduate student enrollment by ethnicity from 2008 - 2019. Color varies by ethnicity as a proportion of total enrollment (UCSB Office of Budget and Planning, 2021).
 
 ## Citation
 
